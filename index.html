@@ -1,20 +1,36 @@
 <script>
-  var miSustantivo = "bicicleta";
-  var miAdjetivo = "pequeña";
-  var miVerbo = "voló";
-  var miAdverbio = "lentamente";
+  var miListaDeCompras = [
+    ["cereal", 3],
+    ["leche", 2],
+    ["galletas", 4],
+    ["pan", 5][("refresco", 7)],
+    ["pollo", 7],
+  ];
 
-  var palabrasEnBlanco =
-    "La " +
-    miSustantivo +
-    " " +
-    miAdjetivo +
-    " " +
-    miVerbo +
-    " " +
-    "a la tienda" +
-    " " +
-    miAdverbio;
+  //cereal
+  console.log(
+    "Voy a comprar " +
+      miListaDeCompras[0][1] +
+      " unidades de " +
+      miListaDeCompras[0][0] +
+      "."
+  );
 
-  console.log(palabrasEnBlanco);
+  // leche
+  console.log(
+    "Voy a comprar " +
+      miListaDeCompras[1][1] +
+      " unidades de " +
+      miListaDeCompras[1][0] +
+      "."
+  );
+
+  // galletas
+  console.log(
+    "Voy a comprar " +
+      miListaDeCompras[2][1] +
+      " unidades de " +
+      miListaDeCompras[2][0] +
+      "."
+  );
 </script>
