@@ -1,7 +1,14 @@
 <script>
-  function concatenarTresCadenas(cadena1, cadena2, cadena3) {
-    console.log(cadena1, cadena2, cadena3);
+  function proximoEnFila(arr, elem) {
+    arr.push(elem); // Agregar al final del arreglo
+    return arr.shift(); // Remover el primer elemento del arreglo
   }
 
-  concatenarTresCadenas("Estoy", "aprendiendo", "a programar");
+  var miArreglo = [1, 2, 3, 4, 5];
+
+  console.log("Antes: " + JSON.stringify(miArreglo));
+
+  console.log(proximoEnFila(miArreglo, 6));
+
+  console.log("Despues: " + JSON.stringify(miArreglo));
 </script>
