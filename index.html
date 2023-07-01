@@ -1,30 +1,36 @@
 <script>
-  var coleccionDeDiscos = {
-    7853: {
-      tituloDelAlbum: "Bee Gees Greatest",
-      artista: "Bee Gees",
-      canciones: ["Stayin", "Alive"],
+  var contactos = [
+    {
+      nombre: "Nora",
+      apellido: "Nav",
+      numero: 1837463746,
+      gustos: ["pizzas", "programacion"],
     },
-
-    5439: {
-      tituloDelAlbum: "ABBA Golden",
+    {
+      nombre: "Harry",
+      apellido: "Potter",
+      numero: 12938473845,
+      gustos: ["Howarts", "magia"],
     },
-  };
+    {
+      nombre: "Sherlok",
+      apellido: "Homs",
+      numero: 3405784395,
+      gustos: ["Casos interesantes", "violin"],
+    },
+  ];
 
-  function actualizarDiscos(discos, id, propiedad, valor) {
-    if (valor === "") {
-      delete discos[id][propiedad];
-    } else if (propiedad === "canciones") {
-      discos[id][propiedad] = discos[id][propiedad] || [];
-      discos[id][propiedad].push(valor);
-    } else {
-      discos[id][propiedad] = valor;
+  function buscarPerfil(nombre, propiedad) {
+    for (var i = 0; i < contactos.length; i++) {
+      if (contactos[i].nombre === nombre) {
+        return contactos[i][propiedad] || "La propiedad no existe.";
+      }
     }
+    return "El contacto no existe";
   }
 
-  console.log(coleccionDeDiscos[5439].artista);
-
-  actualizarDiscos(coleccionDeDiscos, 5439, "artista", "ABBA");
-
-  console.log(coleccionDeDiscos[5439].artista);
+  console.log(buscarPerfil("Nora", "gustos"));
+  console.log(buscarPerfil("Harry", "apellido"));
+  console.log(buscarPerfil("Sherlok", "numero"));
+  console.log(buscarPerfil("Nora", "edad"));
 </script>
