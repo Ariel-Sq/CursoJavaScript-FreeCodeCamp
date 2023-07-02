@@ -1,36 +1,10 @@
 <script>
-  var contactos = [
-    {
-      nombre: "Nora",
-      apellido: "Nav",
-      numero: 1837463746,
-      gustos: ["pizzas", "programacion"],
-    },
-    {
-      nombre: "Harry",
-      apellido: "Potter",
-      numero: 12938473845,
-      gustos: ["Howarts", "magia"],
-    },
-    {
-      nombre: "Sherlok",
-      apellido: "Homs",
-      numero: 3405784395,
-      gustos: ["Casos interesantes", "violin"],
-    },
-  ];
-
-  function buscarPerfil(nombre, propiedad) {
-    for (var i = 0; i < contactos.length; i++) {
-      if (contactos[i].nombre === nombre) {
-        return contactos[i][propiedad] || "La propiedad no existe.";
-      }
-    }
-    return "El contacto no existe";
+  function generarFraccionAleatoria() {
+    return Math.random();
   }
 
-  console.log(buscarPerfil("Nora", "gustos"));
-  console.log(buscarPerfil("Harry", "apellido"));
-  console.log(buscarPerfil("Sherlok", "numero"));
-  console.log(buscarPerfil("Nora", "edad"));
+  console.log(generarFraccionAleatoria());
+  console.log(generarFraccionAleatoria());
+  console.log(generarFraccionAleatoria());
+  console.log(generarFraccionAleatoria());
 </script>
